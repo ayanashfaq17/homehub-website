@@ -1,0 +1,7 @@
+node_modules/
+website_inspo/
+.claude/settings.local.json
+CLAUDE.md
+package.json
+package-lock.json
+serve.mjs
