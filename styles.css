@@ -456,10 +456,10 @@ button { font-family: inherit; }
   position: relative;
   overflow: hidden;
   background: linear-gradient(135deg, #00333f 0%, #00485C 55%, #006a82 100%);
-  padding-top: 2.5rem;
+  padding-top: 6.5rem;
   min-height: 100vh;
   display: flex;
-  align-items: center;
+  align-items: safe center;
 }
 .hero-dot-bg {
   position: absolute;
@@ -577,6 +577,27 @@ button { font-family: inherit; }
   font-size: 0.85rem;
   line-height: 1.3;
   margin-top: 0.15rem;
+}
+.hero-bg-mobile {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+}
+.hero-bg-mobile-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center center;
+}
+.hero-bg-mobile-overlay-top {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to bottom, #00333f 0%, rgba(0,51,63,0) 32%);
+}
+.hero-bg-mobile-overlay-bottom {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, #00333f 0%, rgba(0,51,63,0.85) 30%, rgba(0,51,63,0) 60%);
 }
 .hero-image-col {
   display: none;
@@ -1608,6 +1629,7 @@ button { font-family: inherit; }
   .navbar-links { display: flex; }
   .hero-inner { grid-template-columns: 1fr 1fr; }
   .hero-image-col { display: flex; }
+  .hero-bg-mobile { display: none; }
   .grid-4 { grid-template-columns: repeat(4, 1fr); }
   .footer-grid { grid-template-columns: repeat(3, auto); justify-content: center; gap: 7.5rem; }
 }
